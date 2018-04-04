@@ -1,2 +1,264 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+@import 'https://fonts.googleapis.com/css?family=Quantico:700';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+  margin: 0;
+  padding-left: 00px;
+}
+
+#tabletitle{
+  #title2 {
+    padding-left: 800px;
+    float:left;
+    font-family: 'Quantico', sans-serif;
+    font-size: 1em;
+  }
+
+  #title1{
+    font-family: 'Quantico', sans-serif;
+    font-size: 1em;
+    float:left;
+    padding-left: 10px;
+  }
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+
+#tablecontainer{
+    border: 1px solid #dddddd;
+}
+
+#tablewhole {
+    border: 1px solid #dddddd;
+    width:1000px;
+    height:150px;
+    overflow:auto;
+  }
+
+table {
+  font-size: 0.7em;
+  th, tr{
+    border: 1px solid #dddddd;
+    text-align: left;
+  }
+
+  th{
+    background-color: #F5FFFA;
+    font-family: 'Open Sans:700', sans-serif;
+  }
+
+  th, td {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  font-family: 'Open Sans', sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #dddddd;
+}
+
+table {
+    counter-reset: rowNumber;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+table tr th:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+    color: #005f5f;
+}
+
+
+.title {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-family: 'Quantico', sans-serif;
+  font-size: 0.8em;
+  color: grey;
+}
+ 
+.mainnav {
+  ul {
+    list-style: none;
+    background-color: #005f5f;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    border-bottom: 1px solid #888;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  img {    
+    padding-right: 300px;
+    padding-left: 300px;
+    vertical-align : middle;
+  }
+}
+
+
+.tablenav {
+  ul {
+    border-bottom: 1px solid #888;
+    border-color: lightgrey;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 25px;
+  }
+
+  li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    border-bottom: 1px solid #888;
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: middle;
+    border-bottom: none;
+    line-height: 60px;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  button {
+    font-family: 'Quantico', sans-serif;
+    font-size: 1em;
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    
+    border-color: #008B8B;
+  }
+  h2 {
+    font-family: 'Quantico', sans-serif;
+    padding-right: 800px;
+    padding-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+
+.tablenav li.active {
+  font-family: 'Open Sans:700', sans-serif;
+  color: #008B8B;
+  border-bottom: 1px solid #888;
+  border-bottom-width: 3px;
+  border-color: #008B8B;
+}
+
+.dropdown-content {
+  ul.active {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #008B8B;
+  }
+  li{
+    font-family: 'Quantico', sans-serif;
+    font-size: 2em;
+  }
+  img {
+      vertical-align: middle;
+      padding-right: 10px;
+      padding-left: 20px;
+      height: 55px;
+      width: 55px;
+  }
+
+}
+
+.mainnav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+
+.mainnav a:hover {
+  background-color: #005f5f;
+}
+ 
+.mainnav a.active {
+  background-color: #008B8B;
+  cursor: default;
+}
+
+.wrapper {
+  div {
+    border-bottom: 1px solid #888;
+  }
+}
+
+#navigation {
+    background: white;
+    top:140px;
+    bottom:0px;
+    width: 260px;
+    position:absolute;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    right: 0;
+    border-left: 1px solid #888;
+    border-bottom-width: 3px;
+    align-content: left;
+    padding-right: 30px;
+    button {
+        font-family: 'Quantico', sans-serif;
+        font-size: 0.8em;
+        width: 80%;
+        border-color: green;
+    }
+    div {
+      font-family: 'Quantico', sans-serif;
+      color: grey;
+      font-size: 0.8em;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    h4 {
+      font-family: 'Quantico', sans-serif;
+      font-weight: bolder;
+      font-size: 1em;
+      font-weight: normal;
+      padding-top: 10px;      
+    }
+    h5 {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #pricing {
+      background-color: #008B8B;
+      width: 100%;
+
+    } 
+    #tablesapi {
+      color: #008B8B;
+      vertical-align: center;
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }     
+}
+
+@media screen and (min-width: 600px) {
+   .mainnav li {
+    vertical-align: middle;
+    border-bottom: none;
+    line-height: 60px;
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+}

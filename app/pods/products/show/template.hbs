@@ -1,17 +1,101 @@
-<h3>Sub-Product Page</h3>
+<body class="news">
+  <header>
+    <div class="nav">
+        <div class="dropdown-content">
+          <header>
+            <div class="mainnav">
+              <ul class="active">
+                <img src='/assets/avatar.png'>
+                <li onclick='console.log("Button Clicked")' class="publisher"><a href="#">{{link-to 'Data Publisher' 'products'}}</a></li>
+              </ul>
+            </div>
+          </header>
+        </div>
+    </div>
+  </header>
+</body>
 
-{{link-to 'Product page' 'products'}}
 
-<h4>{{product.name}}</h4>
 
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
+
+<div class="tablenav">
+  <ul>
+	<h2>{{product.name}}</h2>
+	<button style="color: #008B8B;" onclick='console.log("Button Clicked")'>COVERAGE</button>
+	<button style="background-color: #008B8B; color: white;" onclick='console.log("Button Clicked")'>DOWNLOAD</button>
+  </ul>
+</div>
+
+
+
+
+
+<div>
+	<header>
+		<div class="tablenav">
+		  <ul>
+		    <li onclick='console.log("Button Clicked")' class="active">DATA SAMPLE</li>
+		    <li onclick='console.log("Button Clicked")'>COVERAGE</li>
+		  </ul>
+		</div>
+	</header>
+
+	<div style="width:100%;overflow:auto;">
+		<table>
+		   <tr>
+	        <th></th>
+	        <th>m_ticker</th>
+	        <th>ticker</th>
+	        <th>comp_name</th>
+	        <th>comp_name_2</th>
+	        <th>exchange</th>
+	        <th>currency_code</th>
+	        <th>per_end_date</th>
+	        <th>per_type</th>
+	        <th>per_code</th>
+	        <th>per_fisc_year</th>
+	        <th>per_fisc_qtr</th>
+	        <th>per_cal_year</th>
+	        <th>per_cal_qtr</th>
+	        <th>rev_type</th>
+	        <th>rev_type_desc</th>
+	        <th>broker_name</th>
+	        <th>analyst_name</th>
+	        <th>eps_rev_date</th>    
+	        <th>eps_rev_est</th>
+	        <th>eps_rev_date_prev</th>
+	        <th>eps_rev_est_prev</th>           
+	      </tr>
+		  {{#each productData as |data|}}
+		    <tr>
+		    <th scope="row"></th>
+	          <td>{{data.m_ticker}}</td>
+	          <td>{{data.ticker}}</td>
+	          <td>{{data.comp_name}}</td>
+	          <td>{{data.comp_name_2}}</td>
+	          <td>{{data.exchange}}</td>
+	          <td>{{data.currency_code}}</td>
+	          <td>{{data.per_end_date}}</td>
+	          <td>{{data.per_type}}</td>
+	          <td>{{data.per_code}}</td>
+	          <td>{{data.per_fisc_year}}</td>       
+	          <td>{{data.per_fisc_qtr}}</td>
+	          <td>{{data.per_cal_year}}</td>
+	          <td>{{data.per_cal_qtr}}</td>
+	          <td>{{data.rev_type}}</td>
+	          <td>{{data.rev_type_desc}}</td>
+	          <td>{{data.broker_name}}</td>
+	          <td>{{data.analyst_name}}</td>
+	          <td>{{data.eps_rev_date}}</td>
+	          <td>{{data.eps_rev_est}}</td>    
+	          <td>{{data.eps_rev_date_prev}}</td>
+	          <td>{{data.eps_rev_est_prev}}</td> 
+		    </tr>
+		  {{/each}}
+		</table>
+	</div>
+</div>
+
+
 
 {{outlet}}

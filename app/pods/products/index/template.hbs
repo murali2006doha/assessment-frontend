@@ -1,17 +1,129 @@
-<h3>Product Page - Index - {{publisher.title}}</h3>
+<body class="news">
+  <header>
+    <div class="mainnav">
+
+      <ul>
+        <li onclick='console.log("Button Clicked")' class="alternative"><a href="#">ALTERNATIVE DATA</a></li>
+        <li onclick='console.log("Button Clicked")' class="core"><a class="active" href="#">CORE FINANCIAL DATA</a></li>
+        <img src='assets/quandl-logo.svg'>
+        <li onclick='console.log("Button Clicked")' class="docs"><a href="#">DOCS & HELP</a></li>
+        <li onclick='console.log("Button Clicked")' class="blog"><a href="#">BLOG</a></li>
+        <li onclick='console.log("Button Clicked")' class="signin"><a href="#">SIGN IN</a></li>
+      </ul>
+        <div class="dropdown-content">
+          <header>
+            <div class="mainnav">
+              <ul class="active">
+                <img src='assets/avatar.png'>
+                <li onclick='console.log("Button Clicked")' class="publisher"><a href="#">Data Publisher</a></li>
+              </ul>
+            </div>
+          </header>
+        </div>
+    </div>
+  </header>
+</body>
+
+<h3 class="title">DATASETS IN THIS DATA PRODUCT</h3>
 
 {{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
 
-  <table>
-    {{#each product.productDataSubset as |data|}}
+<div id="tablecontainer" style="width:1000px;">
+  <div id="tabletitle">
+    <h4 onclick='console.log("Button Clicked")' id="title1">{{product.name}}</h4>
+    <h4 onclick='console.log("Button Clicked")' id="title2">{{link-to "EXPAND" 'products.show' product.id}}</h4>
+  </div>
+  
+  <div id="tablewhole">
+    <table>
       <tr>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.per_end_date}}</td>
+        <th></th>
+        <th>m_ticker</th>
+        <th>ticker</th>
+        <th>comp_name</th>
+        <th>comp_name_2</th>
+        <th>exchange</th>
+        <th>currency_code</th>
+        <th>per_end_date</th>
+        <th>per_type</th>
+        <th>per_code</th>
+        <th>per_fisc_year</th>
+        <th>per_fisc_qtr</th>
+        <th>per_cal_year</th>
+        <th>per_cal_qtr</th>
+        <th>rev_type</th>
+        <th>rev_type_desc</th>
+        <th>broker_name</th>
+        <th>analyst_name</th>
+        <th>eps_rev_date</th>    
+        <th>eps_rev_est</th>
+        <th>eps_rev_date_prev</th>
+        <th>eps_rev_est_prev</th>           
       </tr>
-    {{/each}}
-  </table>
+      {{#each product.productDataSubset as |data|}}
+
+        <tr>
+        <th scope="row"></th>
+          <td>{{data.m_ticker}}</td>
+          <td>{{data.ticker}}</td>
+          <td>{{data.comp_name}}</td>
+          <td>{{data.comp_name_2}}</td>
+          <td>{{data.exchange}}</td>
+          <td>{{data.currency_code}}</td>
+          <td>{{data.per_end_date}}</td>
+          <td>{{data.per_type}}</td>
+          <td>{{data.per_code}}</td>
+          <td>{{data.per_fisc_year}}</td>       
+          <td>{{data.per_fisc_qtr}}</td>
+          <td>{{data.per_cal_year}}</td>
+          <td>{{data.per_cal_qtr}}</td>
+          <td>{{data.rev_type}}</td>
+          <td>{{data.rev_type_desc}}</td>
+          <td>{{data.broker_name}}</td>
+          <td>{{data.analyst_name}}</td>
+          <td>{{data.eps_rev_date}}</td>
+          <td>{{data.eps_rev_est}}</td>    
+          <td>{{data.eps_rev_date_prev}}</td>
+          <td>{{data.eps_rev_est_prev}}</td>     
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>
 {{/each}}
+
+
+  <body>
+      <div id="navigation">
+          <ul>
+              <button style="color: #008B8B;" onclick='console.log("Button Clicked")'>COMMERCIAL DATA</button>
+              <h4 onclick='console.log("Button Clicked")'>DATA OVERVIEW</h4>
+
+              <h5>ajafjsdl;gaorivj aif pahv awhef; nucn efn af o ;ln djh alkjh laejh ovh w;jwqr kjhv aue asjh alsjdhf aldfjh 
+              djfkhals kdjfh jdhc aljkeh aluechb up qoeh hss.</h5>
+
+            <div class="wrapper">
+              <div>
+                  DELIVERY FREQUENCY
+              </div>
+              <div>
+                  DATA FREQUENCY
+              </div>  
+              <div>
+                  REPORTING LAG
+              </div>
+              <div>
+                  HISTORY
+              </div> 
+              <div>
+                  COVERAGE
+              </div>   
+              <h4 id="tablesapi" style="border: 1px solid #888;">Tables Api</h4>
+              <button onclick='console.log("Button Clicked")' id="pricing" >PRICING</button>
+
+            </div>            
+          </ul>
+      </div>
+  </body>
 
 {{outlet}}
